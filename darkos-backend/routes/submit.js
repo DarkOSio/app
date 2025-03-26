@@ -6,7 +6,6 @@ router.post('/', (req, res) => {
   if (!taskId || !ipfsHash) {
     return res.status(400).json({ error: 'Missing fields' });
   }
-  // In real case: validate, store, etc.
   res.json({ status: 'Submitted', taskId, ipfsHash });
 });
 

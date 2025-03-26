@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-dark min-h-screen text-white overflow-x-hidden;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-darker-gray;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border-gray rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-secondary;
+  }
+}
+
+/* Custom animations and transitions */
+@layer components {
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .primary-btn {
+    @apply bg-primary bg-opacity-10 text-primary py-2.5 px-6 rounded-lg font-medium transition-all duration-300 hover:bg-opacity-20;
+  }
+  
+  .card-gradient {
+    @apply bg-gradient-to-br from-card-bg to-darker-gray;
+  }
+}
+
+/* Remove default styles from Vite template */
+:root {
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
