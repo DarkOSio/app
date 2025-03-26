@@ -1,6 +1,11 @@
 # app
 AI-Powered Anonymous Task Protocol
 
+# This repo includes:
+
+- Frontend (TypeScript / Next.js)
+- Backend API (Node.js / Express)
+
 # DarkOS Backend Lite
 
 This is a minimal backend template for the DarkOS protocol — built for demo, testing, and contributor education.
