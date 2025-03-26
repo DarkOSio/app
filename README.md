@@ -1,13 +1,22 @@
-const express = require('express');
-const router = express.Router();
+# app
+AI-Powered Anonymous Task Protocol
 
-router.post('/', (req, res) => {
-  const { taskId, ipfsHash } = req.body;
-  if (!taskId || !ipfsHash) {
-    return res.status(400).json({ error: 'Missing fields' });
-  }
-  // In real case: validate, store, etc.
-  res.json({ status: 'Submitted', taskId, ipfsHash });
-});
+# DarkOS Backend Lite
 
-module.exports = router;
+This is a minimal backend template for the DarkOS protocol — built for demo, testing, and contributor education.
+
+## Features
+
+- Codename alias generator
+- Mock task list
+- Vault address mock
+- IPFS submission mock
+- Fully Express-based, no database
+
+> 🔒 This is not the full backend. Sensitive logic remains private.
+
+## How to Run
+
+```bash
+npm install
+npm run dev
